@@ -54,5 +54,11 @@ def chat():
    reply = r.json()["message"]["content"]
    return jsonify({"reply": reply})
 
+@app.route("/calc", methods=["POST"])
+def calc():
+   expression = request.get_json().get("expression", "")
+   result = eval(expression)
+   return jsonify({"result": str(result)})
+
 if __name__ == "__main__":
    app.run(host="127.0.0.1", port=5000)
