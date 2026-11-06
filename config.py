@@ -1,2 +1,3 @@
-API_KEY = "AKIAZ7Q4R2M8T6W3X9YB"
-API_SECRET = "wJr8Kq2Lm9Xp4Tz7Vb3Nc6Hd1Fg5Sy0Ue8Ri2Oa"
+import os
+API_KEY = os.environ.get("API_KEY")
+API_SECRET = os.environ.get("API_SECRET")
